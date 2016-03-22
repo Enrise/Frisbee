@@ -12,5 +12,5 @@ use Exception;
 
 interface ExinceptionHandler
 {
-    public static function cantHandle(Exception $mySwagger);
+    public static function cantHandle(Exception $e);
 }

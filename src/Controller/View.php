@@ -2,6 +2,18 @@
 
 namespace Frisbee\Controller;
 
-class View extends \Exception
+use Frisbee\Throwable;
+
+class View extends Throwable
 {
+    public function run()
+    {
+        echo 'Running the view! <br/>';
+        // TODO: Implement run() method.
+    }
+
+    public function next()
+    {
+        // TODO: Implement next() method.
+    }
 }

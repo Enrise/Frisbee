@@ -7,10 +7,10 @@ use Frisbee\Exception\ExinceptionHandler;
 
 class Handler implements ExinceptionHandler
 {
-    public static function cantHandle(Exception $mySwagger)
+    public static function cantHandle(Exception $e)
     {
-        if($mySwagger instanceof Bootstrap) {
-            throw new Controller($mySwagger);
+        if($e instanceof Bootstrap) {
+            throw new Controller($e);
         }
     }
 

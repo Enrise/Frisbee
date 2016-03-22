@@ -2,7 +2,9 @@
 
 namespace Frisbee;
 
-class Application extends \Exception
+use Frisbee\Bootstrap\Bootstrap;
+
+class Application extends Throwable
 {
     /**
      * @var string
@@ -13,5 +15,15 @@ class Application extends \Exception
     {
         parent::__construct($name, 1337);
         $this->name = $name;
+    }
+
+    public function run()
+    {
+        echo 'Running the application! <br/>';
+    }
+
+    public function next()
+    {
+        throw new Bootstrap($this);
     }
 }

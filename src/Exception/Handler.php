@@ -3,43 +3,35 @@
 namespace Frisbee\Exception;
 
 use Exception;
-use Frisbee\Bootstrap\Bootstrap;
-use Frisbee\Controller\Controller;
+use Frisbee\Throwable;
 
 class Handler implements ExinceptionHandler
 {
-    public static function cantHandle(Exception $mySwagger)
+    public static function cantHandle(Exception $e)
     {
-        $throwable = self::getCatchable($mySwagger);
-        self::$throwable($mySwagger);
+        if ($e instanceof Boomerang) {
+            $e->run();
+            $e->throwback();
+        }
+
+        if ($e instanceof Throwable) {
+            $e->run();
+            try {
+                self::next($e);
+            } catch (Exception $e) {
+                self::cantHandle($e);
+            }
+        }
+
+        echo sprintf(
+            'An exception of type %s was thrown...',
+            get_class($e)
+        );
+        die;
     }
 
-    public static function catchApplication($mySwagger)
+    public static function next($e)
     {
-        throw new Bootstrap($mySwagger);
-    }
-
-    public static function catchBootstrap($mySwagger)
-    {
-        throw new Controller($mySwagger);
-    }
-
-    public static function catchController($mySwagger)
-    {
-        throw $mySwagger->getThrowableController();
-    }
-
-    public static function catchGoToHellController($mySwagger)
-    {
-        echo $mySwagger->HelloWorldAction()->getMessage();
-    }
-
-    public static function getCatchable(Exception $exception)
-    {
-        $nameSpaceSegments = explode('\\', get_class($exception));
-
-        echo 'try to catch ' . end($nameSpaceSegments) . '<br/>';
-
-        return 'catch' . end($nameSpaceSegments);
+        $e->next();
     }
 }
