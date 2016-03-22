@@ -10,36 +10,35 @@ class Handler implements ExinceptionHandler
 {
     public static function cantHandle(Exception $mySwagger)
     {
-        $throwable = self::getThrowable($mySwagger);
+        $throwable = self::getCatchable($mySwagger);
         self::$throwable($mySwagger);
     }
 
-    public static function throwApplication($mySwagger)
+    public static function catchApplication($mySwagger)
     {
         throw new Bootstrap($mySwagger);
     }
 
-    public static function throwBootstrap($mySwagger)
+    public static function catchBootstrap($mySwagger)
     {
         throw new Controller($mySwagger);
     }
 
-    public static function throwController($mySwagger)
+    public static function catchController($mySwagger)
     {
         throw $mySwagger->getThrowableController();
     }
 
-    public static function throwGoToHellController($mySwagger)
+    public static function catchGoToHellController($mySwagger)
     {
-        echo($mySwagger->HelloWorldAction()->getMessage()); exit;
+        echo($mySwagger->HelloWorldAction()->getMessage());
     }
 
-    public static function getThrowable(Exception $exception)
+    public static function getCatchable(Exception $exception)
     {
-
         $nameSpaceSegments = explode('\\', get_class($exception));
 
         echo 'try to catch ' . end($nameSpaceSegments) . "<br/>";
-        return 'throw' . end($nameSpaceSegments);
+        return 'catch' . end($nameSpaceSegments);
     }
 }
