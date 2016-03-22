@@ -31,14 +31,15 @@ class Handler implements ExinceptionHandler
 
     public static function catchGoToHellController($mySwagger)
     {
-        echo($mySwagger->HelloWorldAction()->getMessage());
+        echo $mySwagger->HelloWorldAction()->getMessage();
     }
 
     public static function getCatchable(Exception $exception)
     {
         $nameSpaceSegments = explode('\\', get_class($exception));
 
-        echo 'try to catch ' . end($nameSpaceSegments) . "<br/>";
+        echo 'try to catch ' . end($nameSpaceSegments) . '<br/>';
+
         return 'catch' . end($nameSpaceSegments);
     }
 }

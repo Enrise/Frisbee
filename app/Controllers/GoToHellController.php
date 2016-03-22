@@ -1,8 +1,8 @@
 <?php
-namespace App\Controllers;
+
+namespace app\Controllers;
 
 use Frisbee\Bootstrap\Bootstrap;
-use Frisbee\Controller\Controller;
 use Frisbee\Controller\View;
 
 class GoToHellController extends \Exception

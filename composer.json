@@ -11,9 +11,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "vlucas/phpdotenv": "^2.2"
+        "vlucas/phpdotenv": "^2.2",
+        "phpmd/phpmd": "^2.4"
     },
     "require-dev": {
+        "fabpot/php-cs-fixer": "^1.11",
         "hmlb/phpunit-vw": "^1.5",
         "phpunit/phpunit": "~3.6|~4.0"
     },

@@ -21,7 +21,7 @@ class Controller extends \Exception
 
     private function initialize($bootstrap)
     {
-        $controllerName = "App\\Controllers\\" . $this->bootstrap->getRoute() . 'Controller';
+        $controllerName = 'App\\Controllers\\' . $this->bootstrap->getRoute() . 'Controller';
 
         $this->throwableController = new $controllerName($bootstrap);
     }

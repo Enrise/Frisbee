@@ -1,0 +1,23 @@
+pr[number]: # Check out a PR.
+  - git fetch upstream refs/pull/%number%/head:refs/remotes/upstream/pr/%number%
+  - git checkout upstream/pr/%number%
+  - =update-submodules
+  - =update
+
+pre-commit: # Running code-sanity checks and unit tests
+  - =check
+  - =test
+
+update-code: # Updating the code, including composer requirements
+  - composer install -o # Install composer requirements (locally)
+
+update-submodules: # Updating git submodules
+  - git submodule update --init --recursive
+
+update:
+  - =update-code
+  - =update-submodules
+
+check: # Checks the sanity of the code (code style and mess detection)
+  - ./vendor/bin/php-cs-fixer fix --verbose --diff --dry-run --config-file=.php_cs.php
+  - ./vendor/bin/phpmd ./src text phpmd.xml --exclude Tests
