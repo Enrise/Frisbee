@@ -1,2 +1,4 @@
-vendor/
 .idea
+.vagrant
+vendor/
+Vagrantfile.local
