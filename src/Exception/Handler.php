@@ -3,21 +3,22 @@
 namespace Frisbee\Exception;
 
 use Exception;
-use Frisbee\Throwable;
+use Frisbee\Flingable;
 
-class Handler implements ExinceptionHandler
+class Handler implements HandlerInterface
 {
     public static function cantHandle(Exception $e)
     {
-        if ($e instanceof Boomerang) {
+        /*if ($e instanceof Boomerang) {
             $e->run();
             $e->throwback();
-        }
+        }*/
 
-        if ($e instanceof Throwable) {
+        if ($e instanceof Flingable) {
             $e->run();
             try {
                 self::next($e);
+                exit; // No more exceptions, we are done.
             } catch (Exception $e) {
                 self::cantHandle($e);
             }

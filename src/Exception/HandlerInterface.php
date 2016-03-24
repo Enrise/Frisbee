@@ -10,7 +10,7 @@ namespace Frisbee\Exception;
 
 use Exception;
 
-interface ExinceptionHandler
+interface HandlerInterface
 {
     public static function cantHandle(Exception $e);
 }

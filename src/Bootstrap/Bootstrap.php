@@ -2,11 +2,11 @@
 
 namespace Frisbee\Bootstrap;
 
-use App\Controllers\GoToHellController;
+use App\Controllers\Index;
 use Frisbee\Application;
-use Frisbee\Throwable;
+use Frisbee\Flingable;
 
-class Bootstrap extends Throwable
+class Bootstrap extends Flingable
 {
     /**
      * @var Application
@@ -21,7 +21,7 @@ class Bootstrap extends Throwable
     public function getRoute()
     {
         // Parse the request and return the possible controller name
-        return 'GoToHell';
+        return 'Index';
     }
 
     public function run()
@@ -31,6 +31,6 @@ class Bootstrap extends Throwable
 
     public function next()
     {
-        throw new GoToHellController($this);
+        throw new Index($this);
     }
 }

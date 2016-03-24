@@ -4,7 +4,7 @@ namespace Frisbee;
 
 use Frisbee\Bootstrap\Bootstrap;
 
-class Application extends Throwable
+class Application extends Flingable
 {
     /**
      * @var string
