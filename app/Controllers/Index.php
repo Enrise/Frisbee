@@ -3,19 +3,13 @@
 namespace App\Controllers;
 
 use App\View\Index as IndexView;
-use Frisbee\Bootstrap\Bootstrap;
-use Frisbee\Flingable;
+use Frisbee\Controller\AbstractController;
 
-class Index extends Flingable
+class Index extends AbstractController
 {
-    public function __construct(Bootstrap $bootstrap)
-    {
-        parent::__construct($bootstrap);
-    }
-
     public function run()
     {
-        echo 'Running the IndexController! <br/>';
+        // Logic
     }
 
     public function next()

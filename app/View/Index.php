@@ -2,14 +2,12 @@
 
 namespace App\View;
 
-use Frisbee\View\ViewAbstract;
+use Frisbee\View\AbstractView;
 
-class Index extends ViewAbstract
+class Index extends AbstractView
 {
     public function run()
     {
-        echo 'Running the IndexView! <br/>';
-
         echo '<h1>' . $this->vars['title'] . '</h1>';
     }
 }

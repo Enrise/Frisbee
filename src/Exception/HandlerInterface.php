@@ -12,5 +12,5 @@ use Exception;
 
 interface HandlerInterface
 {
-    public static function cantHandle(Exception $e);
+    public static function handle(Exception $e);
 }

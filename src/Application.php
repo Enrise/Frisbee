@@ -2,7 +2,7 @@
 
 namespace Frisbee;
 
-use Frisbee\Bootstrap\Bootstrap;
+use App\Bootstrap\Bootstrap;
 
 class Application extends Flingable
 {
@@ -19,7 +19,7 @@ class Application extends Flingable
 
     public function run()
     {
-        echo 'Running the application! <br/>';
+        // Start of the Frisbee framework
     }
 
     public function next()

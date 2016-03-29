@@ -7,7 +7,7 @@ use Frisbee\Flingable;
 
 class Handler implements HandlerInterface
 {
-    public static function cantHandle(Exception $e)
+    public static function handle(Exception $e)
     {
         /*if ($e instanceof Boomerang) {
             $e->run();
@@ -17,11 +17,14 @@ class Handler implements HandlerInterface
         if ($e instanceof Flingable) {
             $e->run();
             try {
-                self::next($e);
+                $e->next();
                 exit; // No more exceptions, we are done.
-            } catch (Exception $e) {
-                self::cantHandle($e);
+            } catch (Flingable $e) {
+                self::handle($e);
+            } catch (\Exception $e) {
+                die($e->getMessage());
             }
+
         }
 
         echo sprintf(
@@ -29,10 +32,5 @@ class Handler implements HandlerInterface
             get_class($e)
         );
         die;
-    }
-
-    public static function next($e)
-    {
-        $e->next();
     }
 }
