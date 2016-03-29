@@ -2,16 +2,10 @@
 
 namespace Frisbee\View;
 
-use Twig_Environment;
-use Twig_Loader_Filesystem;
+use App\Resource\Fetcher\Template as TemplateFetcher;
 
 class TwigView extends AbstractView
 {
-    /**
-     * @var Twig_Environment
-     */
-    protected $twig;
-
     /**
      * @var string
      */
@@ -19,26 +13,16 @@ class TwigView extends AbstractView
 
     public function __construct($template, $vars)
     {
-        parent::__construct($vars);
-        $this->loadTwig();
         $this->templateName = $template;
-    }
-
-    protected function loadTwig()
-    {
-        $twigConfig = $this->loadTwigConfig();
-        $loader = new Twig_Loader_Filesystem($twigConfig['template_path']);
-        $this->twig = new Twig_Environment($loader);
+        parent::__construct($vars);
     }
 
     public function run()
     {
-        echo $this->twig->render($this->templateName, $this->vars);
-    }
-
-    protected function loadTwigConfig()
-    {
-        // TODO: we need a boomerang implemenation here to load the twig path configuration from the application
-        return ['template_path' => getcwd().'/resources/views'];
+        if (!isset($this->resources['template'])) {
+            throw new TemplateFetcher('template', $this);
+        }
+        $template = $this->resources['template'];
+        echo $template->render($this->templateName, $this->vars);
     }
 }

@@ -3,6 +3,7 @@
 namespace Frisbee;
 
 use App\Bootstrap\Bootstrap;
+use Frisbee\Exception\Flingable;
 
 class Application extends Flingable
 {

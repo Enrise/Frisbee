@@ -2,21 +2,24 @@
 
 namespace App\Controllers;
 
-use App\View\Index as IndexView;
 use Frisbee\Controller\AbstractController;
+use App\Resource\Fetcher\Database as DatabaseFetcher;
 use Frisbee\View\TwigView;
 
 class Index extends AbstractController
 {
     public function run()
     {
-        // Logic
+        if (!isset($this->resources['db'])) {
+            throw new DatabaseFetcher('db', $this);
+        }
     }
 
     public function next()
     {
         throw new TwigView(
-            'index.twig', [
+            'index.twig',
+            [
                 'title' => 'Frisbee Framework for Exception Driven Development',
                 'message' => 'Frisbee',
                 'slogan' => 'Your exceptional project starts here'
