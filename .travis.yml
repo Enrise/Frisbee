@@ -1,0 +1,22 @@
+sudo: false
+
+language: php
+
+php:
+  - 7.0
+
+before_install:
+  - composer self-update
+  - echo 'date.timezone = "Europe/Amsterdam"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  - echo 'SYMFONY_ENV=test' > .env
+
+install:
+  - composer install --optimize-autoloader --prefer-dist --no-interaction
+
+script:
+  - vendor/bin/php-cs-fixer fix --verbose --diff --dry-run --config-file=.php_cs.php
+
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache/files

@@ -1,0 +1,35 @@
+# Configure base settings for your box
+$vm_hostname = "frisbee.dev"
+$vm_ip       = "192.168.56.235"
+$vm_box      = "ubuntu/trusty64"
+
+# Optional aliases to set (requires vagrant-hostsupdater plugin)
+# $vm_aliases  = ["alias1.nl", "alias2.com"]
+
+# Define how much memory you want to assign to the VM
+# $vm_memory = 1024
+# $vm_cpus   = 1
+
+# Select the type of mounts to use. This can either be vboxfs, nfs, or rsync.
+# The default is virtualbox.
+# $mount_type = "virtualbox"
+
+# For each mount type the mount options can be specified.
+# Uncomment the correct line below and modify as needed.
+# To mount without mount options, simply use nil.
+# $mount_options_virtualbox = ["dmode=777", "fmode=777"]
+# $mount_options_nfs    = ["actimeo=2"]
+# $mount_options_rsync  = []
+
+# If the basebox is located somewhere else it can be entered here.
+# $basebox_path = "dev/basebox"
+
+# If the Salt custom path is located somewhere else it can be entered here.
+# $salt_custom_path = "dev/salt"
+
+# Run Salt highstate upon provisioning
+# $salt_highstate = true
+
+# Set the Salt verbosity and log level
+# $salt_log_level = "info"
+# $salt_verbose = false

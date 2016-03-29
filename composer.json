@@ -1,0 +1,32 @@
+{
+    "name": "enrise/frisbee",
+    "description": "Modern Exception Driven Development framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enrise",
+            "email": "codecousine@enrise.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vlucas/phpdotenv": "^2.2",
+        "phpmd/phpmd": "^2.4",
+        "symfony/routing": "^3.0"
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer": "^1.11",
+        "hmlb/phpunit-vw": "^1.5",
+        "phpunit/phpunit": "~3.6|~4.0"
+    },
+    "autoload": {
+        "files": [
+            "src/Loader.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Frisbee\\": "src/"
+        }
+    }
+}
