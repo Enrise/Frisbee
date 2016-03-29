@@ -1,9 +1,6 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-
-ini_set('display_errors', true);
-ini_set('display_startup_errors', true);
-ini_set('error_reporting', E_ALL);
+chdir(dirname(__DIR__ . '..' . DIRECTORY_SEPARATOR));
 
 throw new \Frisbee\Application('myApp');
