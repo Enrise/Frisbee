@@ -30,7 +30,7 @@ abstract class AbstractController extends Flingable implements ControllerInterfa
 
     public function next()
     {
-        $dispatchMethod = $this->method.'Action';
+        $dispatchMethod = $this->method . 'Action';
         if (!method_exists($this, $dispatchMethod)) {
             throw new \Exception(
                 sprintf('requested method: %s does not exist in controller %s', $dispatchMethod, get_class($this))
