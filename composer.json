@@ -21,8 +21,7 @@
         "hmlb/phpunit-vw": "^1.5",
         "phpunit/phpunit": "~3.6|~4.0",
         "squizlabs/php_codesniffer": "^2.5",
-        "existenznl/permcheck": "^1.0",
-        "phing/phing": "^2.14"
+        "existenznl/permcheck": "^1.0"
     },
     "autoload": {
         "files": [
