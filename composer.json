@@ -11,17 +11,17 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "vlucas/phpdotenv": "^2.2",
-        "phpmd/phpmd": "^2.4",
         "symfony/routing": "^3.0",
-        "twig/twig": "^1.24"
+        "twig/twig": "^1.24",
+        "vlucas/phpdotenv": "^2.2"
     },
     "require-dev": {
+        "existenznl/permcheck": "^1.0",
         "fabpot/php-cs-fixer": "^1.11",
         "hmlb/phpunit-vw": "^1.5",
         "phpunit/phpunit": "~3.6|~4.0",
-        "squizlabs/php_codesniffer": "^2.5",
-        "existenznl/permcheck": "^1.0"
+        "phpmd/phpmd": "^2.4",
+        "squizlabs/php_codesniffer": "^2.5"
     },
     "autoload": {
         "files": [
