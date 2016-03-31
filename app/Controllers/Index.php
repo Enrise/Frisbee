@@ -18,7 +18,8 @@ class Index extends AbstractController
         throw new TwigView(
             'index.twig', [
                 'title' => 'Frisbee Framework for Exception Driven Development',
-                'message' => 'You caught me',
+                'message' => 'Frisbee',
+                'slogan' => 'Your exceptional project starts here'
             ]
         );
     }
