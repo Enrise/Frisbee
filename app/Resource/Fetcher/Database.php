@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Resource\Fetcher;
+namespace app\Resource\Fetcher;
 
 use Frisbee\Exception\Boomerang;
 

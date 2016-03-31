@@ -12,6 +12,6 @@ return Symfony\CS\Config\Config::create()
             ->exclude('vendor')
             ->exclude('public')
             ->name('*.php')
-            ->in(__DIR__)
+            ->in(__DIR__ . '/../../')
     )
 ;

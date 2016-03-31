@@ -3,7 +3,7 @@
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Route;
 
-/**
+/*
  * Bleeding edge routing configuration
  */
 $routes = new RouteCollection();

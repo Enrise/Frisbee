@@ -39,7 +39,7 @@ class Application extends Flingable
     public function run()
     {
         // Load all configuration files
-        foreach (glob("config/*.php") as $file) {
+        foreach (glob('config/*.php') as $file) {
             $filename = basename($file, '.php');
             $this->config[$filename] = require_once $file;
         }

@@ -7,7 +7,7 @@ use Exception;
 abstract class Flingable extends Exception
 {
     /**
-     * The registry of resources
+     * The registry of resources.
      *
      * @var array
      */

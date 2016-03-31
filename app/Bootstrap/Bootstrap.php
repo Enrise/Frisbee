@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Bootstrap;
+namespace app\Bootstrap;
 
 use Frisbee\Bootstrap\AbstractBootstrap;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace app\Controllers;
 
 use Frisbee\Controller\AbstractController;
 use App\Resource\Fetcher\Database as DatabaseFetcher;
@@ -22,7 +22,7 @@ class Index extends AbstractController
             [
                 'title' => 'Frisbee Framework for Exception Driven Development',
                 'message' => 'Frisbee',
-                'slogan' => 'Your exceptional project starts here'
+                'slogan' => 'Your exceptional project starts here',
             ]
         );
     }

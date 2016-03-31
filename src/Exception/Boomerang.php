@@ -5,7 +5,7 @@ namespace Frisbee\Exception;
 abstract class Boomerang extends Flingable
 {
     /**
-     * The previous exception
+     * The previous exception.
      *
      * @var Flingable
      */
