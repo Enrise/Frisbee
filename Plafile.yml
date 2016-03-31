@@ -19,7 +19,7 @@ update:
   - =update-submodules
 
 check: # Checks the sanity of the code (code style and mess detection)
-  - ./vendor/bin/php-cs-fixer fix --verbose --diff --dry-run --config-file=.php_cs.php
+  - ./vendor/bin/php-cs-fixer fix --verbose --diff --dry-run --config-file=./dev/phpcsfixer/php_cs.php
   - ./vendor/bin/phpmd ./src text phpmd.xml --exclude Tests
 
 test:
