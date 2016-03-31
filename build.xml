@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="frisbee" default="test" basedir=".">
+
+    <property name="project.root" value="${phing.dir}" />
+    <property name="environment" value="development" />
+
+    <property file="${project.basedir}/dev/phing/global.properties" override="true"/>
+    <property file="${project.basedir}/dev/phing/${environment}.properties" override="true" />
+
+    <target name="permcheck">
+        <exec executable="vendor/bin/permcheck" passthru="true" checkreturn="${checkreturn}">
+            <arg value="-c" />
+            <arg value="dev/permcheck/permcheck.xml" />
+        </exec>
+    </target>
+
+    <target name="phpcs">
+        <exec executable="vendor/bin/phpcs" passthru="true" checkreturn="${checkreturn}">
+            <arg value="--standard=PSR2" />
+            <arg value="app/" />
+            <arg value="src/" />
+        </exec>
+    </target>
+
+    <target name="test" depends="permcheck, phpcs"
+            description="Default target used with CI">
+    </target>
+
+</project>

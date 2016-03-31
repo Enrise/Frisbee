@@ -1,0 +1,8 @@
+<permcheck>
+    <excludes>
+        <dir>dev/basebox/</dir>
+        <dir>vendor/</dir>
+        <dir>.git/</dir>
+    </excludes>
+    <executables />
+</permcheck>
