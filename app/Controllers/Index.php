@@ -15,7 +15,7 @@ class Index extends AbstractController
         }
     }
 
-    public function next()
+    public function indexAction()
     {
         throw new TwigView(
             'index.twig',
@@ -25,5 +25,10 @@ class Index extends AbstractController
                 'slogan' => 'Your exceptional project starts here',
             ]
         );
+    }
+
+    public function codeExampleAction()
+    {
+        throw new TwigView('code.twig');
     }
 }
