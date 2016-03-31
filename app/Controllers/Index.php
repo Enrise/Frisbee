@@ -22,7 +22,6 @@ class Index extends AbstractController
             [
                 'title' => 'Frisbee Framework for Exception Driven Development',
                 'message' => 'Frisbee',
-                'slogan' => 'Your exceptional project starts here',
             ]
         );
     }
