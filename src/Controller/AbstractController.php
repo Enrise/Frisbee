@@ -3,7 +3,7 @@
 namespace Frisbee\Controller;
 
 use Frisbee\Bootstrap\BootstrapInterface;
-use Frisbee\Flingable;
+use Frisbee\Exception\Flingable;
 
 abstract class AbstractController extends Flingable implements ControllerInterface
 {

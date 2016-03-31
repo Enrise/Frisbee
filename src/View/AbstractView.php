@@ -2,7 +2,7 @@
 
 namespace Frisbee\View;
 
-use Frisbee\Flingable;
+use Frisbee\Exception\Flingable;
 
 abstract class AbstractView extends Flingable
 {
@@ -15,6 +15,6 @@ abstract class AbstractView extends Flingable
 
     public function next()
     {
-        // This is a view, we are probably done here.
+        // This is a view, we probably don't need a next.
     }
 }

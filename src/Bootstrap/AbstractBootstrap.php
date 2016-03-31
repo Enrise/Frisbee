@@ -3,7 +3,7 @@
 namespace Frisbee\Bootstrap;
 
 use Frisbee\Application;
-use Frisbee\Flingable;
+use Frisbee\Exception\Flingable;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 
