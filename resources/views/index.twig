@@ -27,23 +27,8 @@
             </g>
         </svg>
         <p>{{ slogan }}</p>
+        <p><a href="/code-example" title="View the lines used to create this page ">view getting started code</a></p>
     </header>
 </section>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        var $window = $(window),
-                $html = $('html');
-        // Disable animations/transitions until the page has loaded.
-        $html.addClass('is-loading');
-        $window.on('load', function () {
-            window.setTimeout(function () {
-                $html.removeClass('is-loading');
-            }, 0);
-        });
-    });
-</script>
 </body>
 </html>
