@@ -21,12 +21,12 @@ class Application extends Flingable
     {
         parent::__construct($name, 1337);
         $this->name = $name;
-        $this->config = array();
+        $this->config = [];
     }
 
     public function getConfig($key = null)
     {
-        if (is_null($key)) {
+        if (is_null($key) || empty($this->config)) {
             return $this->config;
         }
 
