@@ -13,7 +13,8 @@
     "require": {
         "vlucas/phpdotenv": "^2.2",
         "phpmd/phpmd": "^2.4",
-        "symfony/routing": "^3.0"
+        "symfony/routing": "^3.0",
+        "twig/twig": "^1.24"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "^1.11",

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> {{ title }} </title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style type="text/css">
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-stretch:inherit;vertical-align:baseline;font:inherit inherit inherit inherit/inherit inherit}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}*,::before,::after{box-sizing:border-box}body{background:#606c88;background:-webkit-linear-gradient(to left,#606c88,#3f4c6b);background:linear-gradient(to left,#606c88,#3f4c6b)}body,input,select,textarea{color:#6f7577;font:400 15pt/1.75em Raleway,Helvetica,sans-serif}p{margin:0 0 2em}h1,h2,h3,h4,h5,h6{color:#61686b;font-weight:800;letter-spacing:.075em;line-height:1em;margin:0 0 1em;text-transform:uppercase}html body{text-decoration:none}html body::before{-webkit-font-smoothing:antialiased;text-transform:none!important;transform-origin:50% 50% 0;color:#454d50;content:"";cursor:default;display:block;height:2em;left:50%;opacity:0;margin:-1em 0 0 -1em;position:fixed;text-align:center;top:50%;width:2em;z-index:-1;animation:spinner-show 1.5s ease .25s 1 forwards,spinner-hide .25s ease-in-out forwards!important;font:400 2em/2em FontAwesome}html body::after{content:"";display:block;height:100%;left:0;opacity:0;position:fixed;top:0;width:100%;z-index:-1;animation:overlay-hide 1s ease-in forwards!important;background:#313a3d}header p{color:#a8b0b3;letter-spacing:.05em;text-transform:uppercase}header h1 + p{margin-top:-1em}header h2 + p{margin-top:-1em}header h3 + p{margin-top:-.8em}header h4 + p,header h5 + p,header h6 + p{font-size:.8em;margin-top:-.6em}header.major{text-align:center}header.major h1,header.major h2,header.major h3,header.major h4,header.major h5,header.major h6{position:relative}header.major h1::after,header.major h2::after,header.major h3::after,header.major h4::after,header.major h5::after,header.major h6::after{content:"";display:block;height:2px;margin:.75em auto 0;position:relative;width:4em;background:#ddd}header.major p{margin-top:0}.main-bg{transition:opacity .5s ease-out;height:100%;left:0;opacity:0;position:fixed;top:0;width:100%;z-index:-1;background-attachment:fixed,fixed;background-size:auto,cover;background-position:0 0%,50% 50%}#header{height:100vh;position:relative;text-align:center}#header::after{content:"";display:inline-block;height:100vh;vertical-align:middle}#header header{color:rgba(255,255,255,0.498039);display:inline-block;padding-bottom:8em;vertical-align:middle}#header header h1,#header header h2,#header header h3,#header header h4,#header header h5,#header header h6,#header header strong,#header header b{color:#fff}#header header h1{font-size:3em;line-height:1.25em;margin:0}#header header h1::after{margin-top:.5em}#header header p{color:#fff;font-weight:700;margin:1.5em 0 0}@-moz-keyframes overlay-hide{0%{opacity:1;z-index:10000}15%{opacity:1;z-index:10000}99%{opacity:0;z-index:10000}100%{opacity:0;z-index:-1}}@-webkit-keyframes overlay-hide{0%{opacity:1;z-index:10000}15%{opacity:1;z-index:10000}99%{opacity:0;z-index:10000}100%{opacity:0;z-index:-1}}@-ms-keyframes overlay-hide{0%{opacity:1;z-index:10000}15%{opacity:1;z-index:10000}99%{opacity:0;z-index:10000}100%{opacity:0;z-index:-1}}@keyframes overlay-hide{0%{opacity:1;z-index:10000}15%{opacity:1;z-index:10000}99%{opacity:0;z-index:10000}100%{opacity:0;z-index:-1}}html body{text-decoration:none}html body:before{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-transform:none!important;-moz-transform-origin:50% 50%;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;color:#606c88;cursor:default;display:block;height:2em;left:50%;opacity:0;margin:-1em 0 0 -1em;position:fixed;text-align:center;top:50%;width:2em;z-index:-1;font:400 2em/2em FontAwesome}html body:after{-moz-animation:overlay-hide 1s ease-in forwards!important;-webkit-animation:overlay-hide 1s ease-in forwards!important;-ms-animation:overlay-hide 1s ease-in forwards!important;animation:overlay-hide 1s ease-in forwards!important;background:#606c88;content:'';display:block;height:100%;left:0;opacity:0;position:fixed;top:0;width:100%;z-index:-1}html.is-loading body:after{-moz-animation:none!important;-webkit-animation:none!important;-ms-animation:none!important;animation:none!important;opacity:1;z-index:10000} /* CSS based on Highlights by HTML5 UP - html5up.net */
+    </style>
+</head>
+<body>
+<section id="header">
+    <header class="major">
+        <h1>{{ message }}</h1>
+        <p>{{ slogan }}</p>
+    </header>
+</section>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        var $window = $(window),
+                $html = $('html');
+
+        // Disable animations/transitions until the page has loaded.
+        $html.addClass('is-loading');
+
+        $window.on('load', function () {
+            window.setTimeout(function () {
+                $html.removeClass('is-loading');
+            }, 0);
+        });
+    });
+</script>
+</body>
+</html>
