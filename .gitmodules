@@ -1,3 +1,0 @@
-[submodule "dev/basebox"]
-	path = dev/basebox
-	url = git@github.com:enrise/basebox.git
