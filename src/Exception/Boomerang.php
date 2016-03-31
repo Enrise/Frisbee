@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stefan
- * Date: 29-3-16
- * Time: 20:22
- */
 
 namespace Frisbee\Exception;
-
 
 abstract class Boomerang extends Flingable
 {
