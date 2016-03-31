@@ -2,6 +2,8 @@
 
 # Frisbee by Enrise
 
+[![Exception Coverage](https://img.shields.io/badge/Exception%20Coverage-100%25-green.svg?style=flat-square)](https://github.com/Enrise/Frisbee)
+[![Exception Driven Development](https://img.shields.io/badge/EDD-100%25-green.svg?style=flat-square)](https://github.com/Enrise/Frisbee)
 [![Travis branch](https://img.shields.io/travis/Enrise/Frisbee/master.svg?style=flat-square)](https://travis-ci.org/Enrise/Frisbee)
 [![Packagist](https://img.shields.io/packagist/v/enrise/frisbee.svg?style=flat-square)](https://packagist.org/packages/enrise/frisbee)  [![Packagist](https://img.shields.io/packagist/dm/enrise/frisbee.svg?style=flat-square)](https://packagist.org/packages/enrise/frisbee/stats)
 [![Packagist](https://img.shields.io/packagist/l/enrise/frisbee.svg?style=flat-square)](https://github.com/Enrise/Frisbee/blob/master/LICENSE)
