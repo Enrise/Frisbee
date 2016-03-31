@@ -9,7 +9,7 @@
             "email": "codecousine@enrise.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "vlucas/phpdotenv": "^2.2",
         "phpmd/phpmd": "^2.4",
