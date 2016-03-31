@@ -31,13 +31,14 @@ if (is_file($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $_SERVER['SCRIPT_N
 }
 
 $_SERVER = array_merge($_SERVER, $_ENV);
-$_SERVER['SCRIPT_FILENAME'] = $_SERVER['DOCUMENT_ROOT'] . '/public/index.php';
+$_SERVER['DOCUMENT_ROOT'] = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'public';
+$_SERVER['SCRIPT_FILENAME'] = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'index.php';
 
 // Since we are rewriting to index.php, adjust SCRIPT_NAME and PHP_SELF accordingly
-$_SERVER['SCRIPT_NAME'] = $_SERVER['DOCUMENT_ROOT'] . '/public/index.php';
-$_SERVER['PHP_SELF'] = $_SERVER['DOCUMENT_ROOT'] . '/public/index.php';
+$_SERVER['SCRIPT_NAME'] = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'index.php';
+$_SERVER['PHP_SELF'] = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'index.php';
 
-require __DIR__ . '/../public/index.php';
+require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'index.php';
 
 error_log(
     sprintf(

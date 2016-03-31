@@ -21,6 +21,7 @@ class Application extends Flingable
     {
         parent::__construct($name, 1337);
         $this->name = $name;
+        $this->config = array();
     }
 
     public function getConfig($key = null)
@@ -39,7 +40,8 @@ class Application extends Flingable
     public function run()
     {
         // Load all configuration files
-        foreach (glob('config/*.php') as $file) {
+        $appRoot = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR;
+        foreach (glob($appRoot . 'config/*.php') as $file) {
             $filename = basename($file, '.php');
             $this->config[$filename] = require_once $file;
         }
