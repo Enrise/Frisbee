@@ -60,7 +60,7 @@ See the code in the application to discover how to fling towards the different p
 
 ### Boomerangs
 
-Boomerangs are like Frisbees, with the added functionality that they return on the place they were thrown from. This makes is unbelievably easy to e.g. load resources like a database handler, or in the example below, the Twig templating engine.
+Boomerangs are like Frisbees, with the added functionality that they return on the place they were thrown from. This makes it unbelievably easy to e.g. load resources like a database handler, or in the example below, the Twig templating engine.
 
 ```php
 if (!isset($this->resources['template'])) {
