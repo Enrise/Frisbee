@@ -8,6 +8,10 @@
 [![Packagist](https://img.shields.io/packagist/v/enrise/frisbee.svg?style=flat-square)](https://packagist.org/packages/enrise/frisbee)  [![Packagist](https://img.shields.io/packagist/dm/enrise/frisbee.svg?style=flat-square)](https://packagist.org/packages/enrise/frisbee/stats)
 [![Packagist](https://img.shields.io/packagist/l/enrise/frisbee.svg?style=flat-square)](https://github.com/Enrise/Frisbee/blob/master/LICENSE)
 
+## Demo
+
+![](https://raw.githubusercontent.com/Enrise/Frisbee/master/frisbee-demo.gif)
+
 ## About
 
 With Frisbee you can start enjoying the next level of programming: exception driven development.
