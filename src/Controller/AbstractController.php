@@ -12,17 +12,31 @@ abstract class AbstractController extends Flingable implements ControllerInterfa
      */
     private $bootstrap;
 
-    private $throwableController;
+    /**
+     * @var string
+     */
+    protected $method;
 
-    public function __construct(BootstrapInterface $bootstrap)
+    public function __construct(BootstrapInterface $bootstrap, $defaultMethod = 'index')
     {
         $this->bootstrap = $bootstrap;
-        $this->initialize($bootstrap);
+        $this->method = $defaultMethod;
     }
 
-    private function initialize(BootstrapInterface $bootstrap)
+    public function run()
     {
-        // $controllerName = 'App\\Controllers\\' . $this->bootstrap->getRoute();
-        // $this->throwableController = new $controllerName($bootstrap);
+        // You could implement "middleware" here or load dependencies in your controller by using boomerang
+    }
+
+    public function next()
+    {
+        $dispatchMethod = $this->method . 'Action';
+        if (!method_exists($this, $dispatchMethod)) {
+            throw new \Exception(
+                sprintf('requested method: %s does not exist in controller %s', $dispatchMethod, get_class($this))
+            );
+        }
+
+        return $this->$dispatchMethod();
     }
 }

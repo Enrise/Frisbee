@@ -26,7 +26,11 @@ abstract class AbstractBootstrap extends Flingable implements BootstrapInterface
 
         $controllerClass = $matchedRoute['controller'];
         if (strpos($controllerClass, '\\') === false) {
-            $controllerClass = 'App\\Controllers\\' . $controllerClass;
+            $controllerClass = 'App\\Controllers\\' . ucfirst($controllerClass);
+        }
+
+        if (array_key_exists('action', $matchedRoute)) {
+            throw new $controllerClass($this, $matchedRoute['action']);
         }
 
         throw new $controllerClass($this);

@@ -11,7 +11,7 @@ class TwigView extends AbstractView
      */
     protected $templateName;
 
-    public function __construct($template, $vars)
+    public function __construct($template, $vars = [])
     {
         $this->templateName = $template;
         parent::__construct($vars);
@@ -22,6 +22,7 @@ class TwigView extends AbstractView
         if (!isset($this->resources['template'])) {
             throw new TemplateFetcher('template', $this);
         }
+
         $template = $this->resources['template'];
         echo $template->render($this->templateName, $this->vars);
     }

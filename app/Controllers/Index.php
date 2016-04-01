@@ -15,15 +15,19 @@ class Index extends AbstractController
         }
     }
 
-    public function next()
+    public function indexAction()
     {
         throw new TwigView(
             'index.twig',
             [
                 'title' => 'Frisbee Framework for Exception Driven Development',
                 'message' => 'Frisbee',
-                'slogan' => 'Your exceptional project starts here',
             ]
         );
+    }
+
+    public function codeExampleAction()
+    {
+        throw new TwigView('code.twig');
     }
 }
