@@ -13,7 +13,6 @@
     "require": {
         "symfony/routing": "^3.0",
         "twig/twig": "^1.24",
-        "vlucas/phpdotenv": "^2.2",
         "alrik11es/cowsayphp": "^1.0"
     },
     "require-dev": {
