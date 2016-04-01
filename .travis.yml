@@ -18,5 +18,5 @@ script:
 
 cache:
   directories:
-    - vendor
-    - $HOME/.composer/cache/files
+    # - vendor Travis seems broken right now, will investigate later
+    - $HOME/.composer
