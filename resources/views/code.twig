@@ -46,14 +46,13 @@ $routes->add('home_about', new Route('/about', array('controller' => 'index', 'a
 namespace app\Controllers;
 
 use Frisbee\Controller\AbstractController;
-use App\Resource\Fetcher\Database as DatabaseFetcher;
 use Frisbee\View\TwigView;
 
 class Index extends AbstractController
 {
     public function aboutAction()
     {
-        throw new TwigView('code.twig');
+        throw new TwigView('about.twig');
     }
 }
         </code>
