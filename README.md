@@ -12,6 +12,10 @@
 
 ![](https://raw.githubusercontent.com/Enrise/Frisbee/master/frisbee-demo.gif)
 
+## Disclaimer
+
+This is just a 1st of April joke, I hope you liked it! :)
+
 ## About
 
 With Frisbee you can start enjoying the next level of programming: exception driven development.
